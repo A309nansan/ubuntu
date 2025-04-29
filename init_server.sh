@@ -83,8 +83,6 @@ echo "===== 7. Docker 그룹 및 권한 설정 ====="
 # 그룹이 이미 존재해도 오류를 무시하고 넘어가기 위해 || true
 sudo groupadd docker || true
 
-# 현재 사용자($USER)를 docker 그룹에 추가
-sudo usermod -aG docker "$USER"
-
 echo "===== Docker 설치 및 설정 완료 ====="
-echo "현재 세션을 종료했다가 재 접속한 후 사용해 주세요."
+echo "sudo usermod -aG docker \"$USER\""
+echo "위 명령어를 입력하고 현재 세션을 종료했다가 재 접속한 후 사용해 주세요."
